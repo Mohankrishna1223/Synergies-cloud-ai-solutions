@@ -35,6 +35,7 @@ app.add_middleware(
         "https://d2gea04v7cw14f.cloudfront.net",
         "https://d2qqwbvm0bydyb.cloudfront.net",
         "https://chatgpt.com",
+        "synergycloudai.com",
     ],
     allow_credentials=True,
     allow_methods=["*"],
