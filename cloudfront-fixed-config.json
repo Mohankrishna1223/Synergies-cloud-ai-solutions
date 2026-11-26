@@ -1,0 +1,104 @@
+{
+    "CallerReference":  "dba0a1f9-befd-4d1b-af85-ce0d0d6ccbff",
+    "Aliases":  {
+                    "Quantity":  0
+                },
+    "DefaultRootObject":  "index.html",
+    "Origins":  {
+                    "Quantity":  1,
+                    "Items":  [
+                                  {
+                                      "Id":  "synergies-dev.s3.ap-south-2.amazonaws.com-mvhs2v2dphp",
+                                      "DomainName":  "synergies-dev.s3.ap-south-2.amazonaws.com",
+                                      "OriginPath":  "",
+                                      "CustomHeaders":  {
+                                                            "Quantity":  0
+                                                        },
+                                      "S3OriginConfig":  {
+                                                             "OriginAccessIdentity":  "",
+                                                             "OriginReadTimeout":  30
+                                                         },
+                                      "ConnectionAttempts":  3,
+                                      "ConnectionTimeout":  10,
+                                      "OriginShield":  {
+                                                           "Enabled":  false
+                                                       },
+                                      "OriginAccessControlId":  "E1QBSQS40KCFBL"
+                                  }
+                              ]
+                },
+    "OriginGroups":  {
+                         "Quantity":  0
+                     },
+    "DefaultCacheBehavior":  {
+                                 "TargetOriginId":  "synergies-dev.s3.ap-south-2.amazonaws.com-mvhs2v2dphp",
+                                 "TrustedSigners":  {
+                                                        "Enabled":  false,
+                                                        "Quantity":  0
+                                                    },
+                                 "TrustedKeyGroups":  {
+                                                          "Enabled":  false,
+                                                          "Quantity":  0
+                                                      },
+                                 "ViewerProtocolPolicy":  "redirect-to-https",
+                                 "AllowedMethods":  {
+                                                        "Quantity":  2,
+                                                        "Items":  [
+                                                                      "HEAD",
+                                                                      "GET"
+                                                                  ],
+                                                        "CachedMethods":  {
+                                                                              "Quantity":  2,
+                                                                              "Items":  [
+                                                                                            "HEAD",
+                                                                                            "GET"
+                                                                                        ]
+                                                                          }
+                                                    },
+                                 "SmoothStreaming":  false,
+                                 "Compress":  true,
+                                 "LambdaFunctionAssociations":  {
+                                                                    "Quantity":  0
+                                                                },
+                                 "FunctionAssociations":  {
+                                                              "Quantity":  0
+                                                          },
+                                 "FieldLevelEncryptionId":  "",
+                                 "CachePolicyId":  "658327ea-f89d-4fab-a63d-7e88639e58f6",
+                                 "GrpcConfig":  {
+                                                    "Enabled":  false
+                                                }
+                             },
+    "CacheBehaviors":  {
+                           "Quantity":  0
+                       },
+    "CustomErrorResponses":  {
+                                 "Quantity":  0
+                             },
+    "Comment":  "Production frontend for the Synergies AI Cloud Solutions portal.",
+    "Logging":  {
+                    "Enabled":  false,
+                    "IncludeCookies":  false,
+                    "Bucket":  "",
+                    "Prefix":  ""
+                },
+    "PriceClass":  "PriceClass_All",
+    "Enabled":  true,
+    "ViewerCertificate":  {
+                              "CloudFrontDefaultCertificate":  true,
+                              "SSLSupportMethod":  "vip",
+                              "MinimumProtocolVersion":  "TLSv1",
+                              "CertificateSource":  "cloudfront"
+                          },
+    "Restrictions":  {
+                         "GeoRestriction":  {
+                                                "RestrictionType":  "none",
+                                                "Quantity":  0
+                                            }
+                     },
+    "WebACLId":  "arn:aws:wafv2:us-east-1:283548940267:global/webacl/CreatedByCloudFront-5c713c7c/462dc1da-cdcb-4b2b-8e94-e059a45cf0c2",
+    "HttpVersion":  "http2",
+    "IsIPV6Enabled":  true,
+    "ContinuousDeploymentPolicyId":  "",
+    "Staging":  false
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Synergy Cloud AI Solutions – BFSI & Internship Portal</title>
+<style>
+:root{--bg:#fff;--surface:#f4f8fb;--ink:#0b1f3a;--mute:#5b6b7d;--brand:#00aeef;--brand2:#0077b6;--accent:#ff7a3d;--line:#e2e8f0;--card:#fff;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#08121f;--surface:#0e1c2e;--ink:#eaf2fb;--mute:#9fb0c3;--line:#1e3048;--card:#0e1c2e}}
+:root[data-theme="dark"]{--bg:#08121f;--surface:#0e1c2e;--ink:#eaf2fb;--mute:#9fb0c3;--line:#1e3048;--card:#0e1c2e}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;line-height:1.5}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;display:flex;align-items:center;justify-content:space-between;padding:12px 5vw;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.logo{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--ink);text-decoration:none}.logo small{display:block;font-size:10px;letter-spacing:.3em;color:var(--mute);font-weight:600}
+nav{display:flex;gap:22px;align-items:center}nav a{color:var(--ink);text-decoration:none;font-weight:600;font-size:14px}nav a:hover{color:var(--brand)}
+.btn{border:1.5px solid var(--ink);background:none;color:var(--ink);padding:9px 20px;border-radius:99px;font-weight:600;cursor:pointer;font-size:14px;transition:.25s}
+.btn:hover{background:var(--brand);border-color:var(--brand);color:#fff;transform:translateY(-2px)}.btn.solid{background:var(--ink);color:var(--bg)}
+.hero{position:relative;overflow:hidden;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;padding:70px 5vw;min-height:78vh}
+.hero h1{font-size:clamp(34px,5.5vw,68px);line-height:1.05;letter-spacing:-.03em;margin:0 0 18px}
+.hero h1 span{background:linear-gradient(90deg,var(--brand),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mute);max-width:520px;font-size:17px}.cta{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap}
+.orb{width:100%;max-width:440px;margin:auto;animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-16px)}}
+.petal{transform-origin:200px 200px;animation:spin 24s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.25;z-index:-1;animation:drift 14s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(60px,40px) scale(1.2)}}
+.reveal{opacity:0;transform:translateY(30px);transition:.8s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}
+section{padding:70px 5vw}section.alt{background:var(--surface)}
+h2{font-size:clamp(28px,4vw,44px);letter-spacing:-.02em;margin:0 0 8px}.sub{color:var(--mute);margin:0 0 30px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px}.stat b{font-size:36px;color:var(--brand)}.stat div{color:var(--mute);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;transition:.3s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,119,182,.18);border-color:var(--brand)}
+.card::after{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--brand),var(--accent));transform:scaleX(0);transform-origin:left;transition:.4s}.card:hover::after{transform:scaleX(1)}
+.ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:color-mix(in srgb,var(--brand) 14%,transparent);font-size:22px;margin-bottom:12px}
+.card h3{margin:0 0 6px;font-size:18px}.card p{margin:0;color:var(--mute);font-size:14px}
+.tag{display:inline-block;font-size:12px;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--surface);border:1px solid var(--line);margin:10px 6px 0 0;color:var(--mute)}
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:24px;align-items:center}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:8px 16px;border-radius:99px;cursor:pointer;font-weight:600;font-size:13px;transition:.25s}
+.chip.on,.chip:hover{background:var(--brand);color:#fff;border-color:var(--brand)}
+#q{flex:1;min-width:200px;padding:10px 16px;border-radius:99px;border:1px solid var(--line);background:var(--card);color:var(--ink);font-size:14px}
+.job{animation:pop .45s both}@keyframes pop{from{opacity:0;transform:scale(.92) translateY(14px)}}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+.empty{color:var(--mute);padding:30px;text-align:center}
+footer{padding:30px 5vw;border-top:1px solid var(--line);color:var(--mute);font-size:14px}
+#fab{position:fixed;right:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));width:56px;height:56px;border-radius:50%;border:0;background:var(--ink);color:#fff;font-size:24px;cursor:pointer;z-index:30;box-shadow:0 8px 24px rgba(0,0,0,.3);animation:pulse 2.4s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(0,174,239,.6)}100%{box-shadow:0 0 0 18px rgba(0,174,239,0)}}
+#chat{position:fixed;right:20px;bottom:calc(88px + env(safe-area-inset-bottom,0px));width:min(360px,calc(100vw - 40px));height:min(520px,70vh);background:var(--card);border:1px solid var(--line);border-radius:20px;display:flex;flex-direction:column;overflow:hidden;z-index:30;box-shadow:0 24px 60px rgba(0,0,0,.3);transform:translateY(20px) scale(.95);opacity:0;pointer-events:none;transition:.3s}
+#chat.open{transform:none;opacity:1;pointer-events:auto}
+.ch{background:#0b1f3a;color:#fff;padding:14px 18px;font-weight:700;display:flex;justify-content:space-between}.ch button{background:none;border:0;color:#fff;cursor:pointer;font-size:18px}
+#msgs{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px}
+.m{max-width:85%;padding:10px 14px;border-radius:14px;font-size:14px;animation:pop .3s both}.bot{background:var(--surface);align-self:flex-start}.me{background:var(--brand);color:#fff;align-self:flex-end}
+.qs{display:flex;flex-direction:column;gap:8px;padding:0 14px 10px}.qs button{text-align:left;border:1px solid var(--line);background:var(--card);color:var(--ink);padding:9px 12px;border-radius:12px;cursor:pointer;font-size:13px}.qs button:hover{border-color:var(--brand);color:var(--brand)}
+.cin{display:flex;gap:8px;padding:10px;border-top:1px solid var(--line)}.cin input{flex:1;padding:10px 14px;border-radius:99px;border:1px solid var(--line);background:var(--surface);color:var(--ink)}.cin button{width:40px;border-radius:50%;border:0;background:var(--ink);color:#fff;cursor:pointer}
+body{transition:background .4s,color .4s}
+#tt{border:1.5px solid var(--line);background:var(--card);width:40px;height:40px;border-radius:50%;cursor:pointer;font-size:18px}#tt.spin{animation:spin .6s}
+.ring{transform-origin:200px 200px;animation:spin 18s linear infinite}.r2{animation-duration:26s;animation-direction:reverse}
+.mq{overflow:hidden;padding:26px 0;border-block:1px solid var(--line);display:grid;gap:14px}
+.mt{display:flex;width:max-content;animation:mq 45s linear infinite}.mt.rev{animation-direction:reverse;animation-duration:55s}.mq:hover .mt{animation-play-state:paused}
+@keyframes mq{to{transform:translateX(-50%)}}
+.q{white-space:nowrap;margin-right:16px;padding:14px 26px;border-radius:99px;background:var(--card);border:1px solid var(--line);font-weight:600;font-size:16px}.q::before{content:"“ ";color:var(--brand);font-size:22px;vertical-align:-3px}.q::after{content:" ”";color:var(--brand);font-size:22px;vertical-align:-3px}
+.flow{display:grid;grid-template-columns:repeat(var(--c,7),1fr);gap:8px}
+.fn{position:relative;text-align:center;padding:0 6px}
+.fn .dot{width:54px;height:54px;margin:0 auto 14px;border-radius:50%;display:grid;place-items:center;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand2));position:relative;z-index:1}
+.fn:last-child .dot{background:linear-gradient(135deg,var(--accent),#ff4d8d)}
+.fn:last-child .dot::before{content:"";position:absolute;inset:-8px;border-radius:50%;border:2px dashed var(--accent);animation:spin 8s linear infinite}
+.fn::after{content:"";position:absolute;top:26px;left:calc(50% + 27px);width:calc(100% - 46px);height:2px;background:var(--brand);transform:scaleX(0);transform-origin:left;transition:transform .6s}
+.flow.in .fn::after{transform:scaleX(1);transition-delay:calc(var(--i)*.25s)}.fn:last-child::after{display:none}
+.fn small{color:var(--accent);font-weight:700;font-size:12px}.fn h4{margin:4px 0;font-size:15px}.fn p{margin:0;font-size:12px;color:var(--mute)}
+@media(max-width:800px){.flow{grid-template-columns:1fr;gap:26px}.fn{text-align:left;padding-left:72px;min-height:54px}.fn .dot{position:absolute;left:0;top:0;margin:0}.fn::after{top:54px;left:26px;width:2px;height:calc(100% - 28px);transform:scaleY(0);transform-origin:top}.flow.in .fn::after{transform:scaleY(1)}}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:40px}.stats{grid-template-columns:1fr 1fr}nav a{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <a class="logo" href="#top"><svg width="42" height="32" viewBox="0 0 84 64"><path d="M20 58h44a14 14 0 0 0 2-28 20 20 0 0 0-38-6A17 17 0 0 0 20 58z" fill="none" stroke="#00aeef" stroke-width="6"/><circle cx="30" cy="30" r="4" fill="#777"/><circle cx="42" cy="27" r="4" fill="#777"/><circle cx="54" cy="30" r="4" fill="#777"/><rect x="26" y="36" width="8" height="22" fill="#00aeef"/><rect x="38" y="33" width="8" height="25" fill="#00aeef"/><rect x="50" y="36" width="8" height="22" fill="#00aeef"/></svg><span>Synergy Cloud<small>AI SOLUTIONS</small></span></a>
+  <nav><a href="#bfsi">BFSI</a><a href="#internships">Internships</a><a href="#evolution">AI Journey</a><a href="#community">Community</a><button id="tt" aria-label="Toggle day and night theme">🌙</button><button class="btn" onclick="toggleChat(true)">Let’s Connect</button></nav>
+</header>
+
+<div id="top" class="hero">
+  <div class="blob" style="width:380px;height:380px;background:#00aeef;top:-80px;left:-80px"></div>
+  <div class="blob" style="width:320px;height:320px;background:#ff7a3d;bottom:-60px;right:10%;animation-delay:-5s"></div>
+  <div class="reveal in">
+    <h1>Building an <span>AI-native</span> future for finance and talent</h1>
+    <p>Synergy Cloud AI Solutions embeds AI into banking, financial services and insurance workflows, and grows the next generation of engineers through a structured internship program.</p>
+    <div class="cta"><a href="#bfsi"><button class="btn solid">Explore BFSI Solutions</button></a><a href="#internships"><button class="btn">Find an Internship</button></a></div>
+  </div>
+  <svg class="orb" viewBox="0 0 400 400" aria-hidden="true">
+    <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#ffb347"/><stop offset=".5" stop-color="#ff4d8d"/><stop offset="1" stop-color="#7b2ff7"/></linearGradient></defs>
+    <g class="petal" id="petals"></g><circle cx="200" cy="200" r="14" fill="#ffd36b"/>
+    <g class="ring"><circle cx="200" cy="200" r="188" fill="none" stroke="#00aeef" stroke-width="1.5" stroke-dasharray="3 9"/><circle cx="200" cy="12" r="7" fill="#00aeef"/></g>
+    <g class="ring r2"><circle cx="200" cy="200" r="172" fill="none" stroke="#ff7a3d" stroke-width="1" stroke-dasharray="14 10" opacity=".7"/><circle cx="200" cy="372" r="5" fill="#ff7a3d"/></g>
+  </svg>
+</div>
+
+<section class="alt"><div class="stats reveal">
+  <div class="stat"><b data-n="120">0</b>+<div>Enterprise workflows automated</div></div>
+  <div class="stat"><b data-n="45">0</b>+<div>Open internship seats</div></div>
+  <div class="stat"><b data-n="98">0</b>%<div>Platform uptime target</div></div>
+  <div class="stat"><b data-n="12">0</b><div>BFSI client programs</div></div>
+</div></section>
+
+<div class="mq" aria-label="Our beliefs"><div class="mt" id="m1"></div><div class="mt rev" id="m2"></div></div>
+
+<section id="bfsi">
+  <h2 class="reveal">BFSI Solutions</h2><p class="sub reveal">Production-grade AI for banking, financial services and insurance.</p>
+  <div class="filters reveal" id="bf"></div>
+  <div class="grid" id="bgrid"></div>
+</section>
+
+<section id="internships" class="alt">
+  <h2 class="reveal">Internship Portal</h2><p class="sub reveal">Search and filter open roles across domains, modes and durations.</p>
+  <div class="filters reveal"><input id="q" placeholder="Search roles, skills…"><span id="df"></span><span id="mf"></span></div>
+  <div class="grid" id="jgrid"></div>
+</section>
+
+<section id="insights">
+  <h2 class="reveal">Applied AI</h2><p class="sub reveal">Systems that learn. Outcomes that compound.</p>
+  <div class="grid reveal">
+    <div class="card"><div class="ico">🧠</div><h3>RAG Platforms</h3><p>Retrieval-augmented assistants grounded in policy and product documents.</p></div>
+    <div class="card"><div class="ico">☁️</div><h3>Cloud Engineering</h3><p>Secure, scalable AWS-based architectures for regulated industries.</p></div>
+    <div class="card"><div class="ico">🛡️</div><h3>Responsible AI</h3><p>Audit trails, explainability and governance built in from day one.</p></div>
+  </div>
+</section>
+<section id="evolution" class="alt">
+  <h2 class="reveal">How modern AI systems came to be</h2><p class="sub reveal">From hand-written rules to systems that reason over your business data.</p>
+  <div class="flow reveal" id="flow"></div>
+</section>
+
+<section id="community">
+  <h2 class="reveal">Built with the community</h2><p class="sub reveal">Synergy Cloud AI Solutions delivers AI services to enterprises and grows its own engineers through an internship program that is free to apply for.</p>
+  <div class="grid reveal">
+    <div class="card"><div class="ico">🛠️</div><h3>AI services</h3><p>Enterprise AI, RAG platforms and cloud engineering for BFSI clients.</p></div>
+    <div class="card"><div class="ico">🌱</div><h3>Our own talent pipeline</h3><p>Interns learn on live delivery work and grow into our teams.</p></div>
+    <div class="card"><div class="ico">🎓</div><h3>Free to apply</h3><p>Students can apply to any internship at no cost.</p></div>
+    <div class="card"><div class="ico">🤝</div><h3>Community building</h3><p>Mentoring, study circles and shared learning that lift everyone.</p></div>
+  </div>
+  <h3 class="reveal" style="margin:44px 0 18px">The student journey</h3>
+  <div class="flow reveal" id="journey" style="--c:5"></div>
+</section>
+<footer>© 2026 Synergy Cloud AI Solutions · Prototype with static demo data</footer>
+
+<button id="fab" aria-label="Open chat" onclick="toggleChat()">💬</button>
+<div id="chat" role="dialog" aria-label="Synergy AI chat">
+  <div class="ch"><span>Synergy AI</span><button onclick="toggleChat(false)" aria-label="Close">✕</button></div>
+  <div id="msgs"></div><div class="qs" id="qs"></div>
+  <div class="cin"><input id="ci" placeholder="Ask me anything"><button onclick="send()" aria-label="Send">➤</button></div>
+</div>
+
+<script>
+const BFSI=[
+ {c:"Banking",i:"🏦",t:"Loan Origination AI",d:"Automates document intake, KYC checks and credit pre-scoring."},
+ {c:"Banking",i:"💳",t:"Fraud Detection",d:"Real-time anomaly detection on card and UPI transactions."},
+ {c:"Insurance",i:"📄",t:"Claims Automation",d:"Extracts, validates and routes claims with human-in-the-loop review."},
+ {c:"Insurance",i:"📈",t:"Underwriting Assistant",d:"Risk summaries from policy documents using RAG."},
+ {c:"Capital Markets",i:"📊",t:"Portfolio Insights",d:"Explainable analytics dashboards for advisors."},
+ {c:"Compliance",i:"🛡️",t:"Regulatory Monitor",d:"Tracks circulars and maps them to internal controls."}];
+const JOBS=[
+ {t:"AI / GenAI Intern",d:"AI",m:"Remote",w:"6 months",s:["Python","RAG","LLMs"]},
+ {t:"FastAPI Backend Intern",d:"Backend",m:"Hybrid",w:"3 months",s:["FastAPI","REST","SQL"]},
+ {t:"React Frontend Intern",d:"Frontend",m:"Remote",w:"3 months",s:["React","CSS","Animation"]},
+ {t:"Angular Developer Intern",d:"Frontend",m:"On-site",w:"6 months",s:["Angular","RxJS","TypeScript"]},
+ {t:"Cloud (AWS) Intern",d:"Cloud",m:"Hybrid",w:"6 months",s:["AWS","Lambda","S3"]},
+ {t:"BFSI Business Analyst Intern",d:"Analytics",m:"On-site",w:"3 months",s:["Banking","SQL","Excel"]},
+ {t:"Data Engineering Intern",d:"Backend",m:"Remote",w:"6 months",s:["ETL","Python","Pipelines"]},
+ {t:"QA Automation Intern",d:"Quality",m:"Hybrid",w:"3 months",s:["Selenium","PyTest","CI"]}];
+const st={bc:"All",d:"All",m:"All",q:""};
+function chips(el,list,key,fn){el.innerHTML="";["All",...list].forEach(v=>{const b=document.createElement("button");b.className="chip"+(st[key]===v?" on":"");b.textContent=v;b.onclick=()=>{st[key]=v;fn()};el.appendChild(b)})}
+function renderB(){chips(document.getElementById("bf"),[...new Set(BFSI.map(x=>x.c))],"bc",renderB);
+ const g=document.getElementById("bgrid");g.innerHTML="";
+ BFSI.filter(x=>st.bc==="All"||x.c===st.bc).forEach((x,i)=>{const e=document.createElement("div");e.className="card job";e.style.animationDelay=i*60+"ms";
+  e.innerHTML=`<div class="ico">${x.i}</div><h3>${x.t}</h3><p>${x.d}</p><span class="tag">${x.c}</span>`;g.appendChild(e)})}
+function renderJ(){chips(document.getElementById("df"),[...new Set(JOBS.map(x=>x.d))],"d",renderJ);chips(document.getElementById("mf"),["Remote","Hybrid","On-site"],"m",renderJ);
+ const q=st.q.toLowerCase(),g=document.getElementById("jgrid");g.innerHTML="";
+ const r=JOBS.filter(x=>(st.d==="All"||x.d===st.d)&&(st.m==="All"||x.m===st.m)&&(x.t+x.s.join(" ")).toLowerCase().includes(q));
+ if(!r.length)g.innerHTML='<div class="empty">No internships match your filters.</div>';
+ r.forEach((x,i)=>{const e=document.createElement("div");e.className="card job";e.style.animationDelay=i*60+"ms";
+  e.innerHTML=`<h3>${x.t}</h3><p>${x.d} · ${x.m} · ${x.w}</p><div>${x.s.map(s=>`<span class="tag">${s}</span>`).join("")}</div><div class="row"><span class="tag" style="margin:0">Free to apply</span><button class="btn">Apply</button></div>`;g.appendChild(e)})}
+document.getElementById("q").oninput=e=>{st.q=e.target.value;renderJ()};
+// petals
+(function(){const p=document.getElementById("petals");let h="";for(let i=0;i<28;i++){const a=i*360/28;h+=`<ellipse cx="200" cy="105" rx="${18+i%7*2}" ry="62" fill="url(#g)" opacity="${.35+i/28*.6}" transform="rotate(${a} 200 200)"/>`}p.innerHTML=h})();
+// reveal + counters
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");e.target.querySelectorAll("[data-n]").forEach(c=>{const n=+c.dataset.n;let v=0;const t=setInterval(()=>{v+=Math.ceil(n/40);if(v>=n){v=n;clearInterval(t)}c.textContent=v},30)});io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll(".reveal").forEach(e=>io.observe(e));
+// chatbot (static data)
+const FAQ={"What internships are open?":"We have 8 sample roles open across AI, Backend, Frontend, Cloud, Analytics and Quality. Use the filters in the Internship Portal section.",
+"What BFSI solutions do you offer?":"Loan origination AI, fraud detection, claims automation, underwriting assistant, portfolio insights and a regulatory monitor.",
+"Which tech stack do you use?":"React and Angular frontends, Python FastAPI services, and AWS cloud. The database layer is configured per deployment.",
+"How do I apply?":"Pick a role in the Internship Portal and press Apply. This prototype uses static data; submissions will connect to the backend later."};
+const msgs=document.getElementById("msgs"),qs=document.getElementById("qs");
+function add(t,c){const d=document.createElement("div");d.className="m "+c;d.textContent=t;msgs.appendChild(d);msgs.scrollTop=msgs.scrollHeight}
+function ask(q){add(q,"me");setTimeout(()=>add(FAQ[q]||"Thanks for your message! A Synergy team member will follow up. (Demo reply)","bot"),500)}
+Object.keys(FAQ).forEach(q=>{const b=document.createElement("button");b.textContent=q;b.onclick=()=>ask(q);qs.appendChild(b)});
+add("Hi there, I'm Synergy AI. How can I help you today?","bot");
+function send(){const i=document.getElementById("ci");if(i.value.trim()){ask(i.value.trim());i.value=""}}
+document.getElementById("ci").onkeydown=e=>{if(e.key==="Enter")send()};
+function toggleChat(f){document.getElementById("chat").classList.toggle("open",f)}
+// theme (day / night)
+const root=document.documentElement,tb=document.getElementById("tt");
+function setTheme(t){root.setAttribute("data-theme",t);tb.textContent=t==="dark"?"☀️":"🌙"}
+setTheme(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");
+tb.onclick=()=>{tb.classList.add("spin");setTimeout(()=>tb.classList.remove("spin"),600);setTheme(root.getAttribute("data-theme")==="dark"?"light":"dark")};
+// scrolling quotes
+const QUOTES=["Technology should strengthen businesses and the communities around them.","Every intern we grow becomes an engineer we trust.","Build systems that learn, and teams that do too.","Opportunity should never depend on a fee.","Production-grade AI starts with production-grade people.","Great software is built by communities, not just companies.","Learn in the open, ship with care.","From classroom to client delivery."];
+[["m1",QUOTES.slice(0,4)],["m2",QUOTES.slice(4)]].forEach(([id,a])=>{document.getElementById(id).innerHTML=[...a,...a,...a,...a].map(t=>`<span class="q">${t}</span>`).join("")});
+// flow charts
+function flow(id,a){document.getElementById(id).innerHTML=a.map((x,i)=>`<div class="fn" style="--i:${i}"><div class="dot">${i+1}</div><small>${x[0]}</small><h4>${x[1]}</h4><p>${x[2]}</p></div>`).join("")}
+flow("flow",[["1950s–80s","Rules & Expert Systems","Hand-coded logic and statistics"],["1990s–2000s","Machine Learning","Models learn patterns from data"],["2012","Deep Learning","Neural networks excel at images and speech"],["2017","Transformers","Attention makes language modelling scale"],["2020+","Large Language Models","General models that follow instructions"],["2023+","RAG & Agents","Models grounded in private data, using tools"],["Today","Applied AI at Synergy","Production systems for BFSI workflows"]]);
+flow("journey",[["Step 1","Apply free","Open to students at no cost"],["Step 2","Learn","Mentor-led structured tracks"],["Step 3","Build","Work on real company projects"],["Step 4","Intern","Join Synergy delivery teams"],["Step 5","Grow","Lead, mentor and give back"]]);
+document.querySelectorAll(".flow").forEach(e=>io.observe(e));
+renderB();renderJ();
+</script>
+</body>
+</html>
