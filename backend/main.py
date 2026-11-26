@@ -17,6 +17,7 @@ app.add_middleware(
         "http://localhost:3000",
         "https://d2gea04v7cw14f.cloudfront.net",
         "https://d2qqwbvm0bydyb.cloudfront.net",
+        "synergycloudai.com",
     ],
     allow_credentials=True,
     allow_methods=["*"],
