@@ -8,7 +8,7 @@ export default function Footer() {
     e.preventDefault();
     const mailSubject = subject.trim() || 'Inquiry - Synergy Cloud AI Solutions';
     const mailBody = body.trim() || 'Hello Synergy Cloud AI Solutions Team,\n\nI would like to connect regarding...';
-    const mailtoUrl = `mailto:AskHR@SynergyCloudAISolutions.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+    const mailtoUrl = `mailto:askhr@synergycloudai.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
     window.location.href = mailtoUrl;
   };
 
@@ -45,7 +45,7 @@ export default function Footer() {
                 <span className="detail-icon" aria-hidden="true">✉️</span>
                 <div>
                   <strong>Email</strong>
-                  <p><a href="mailto:AskHR@SynergyCloudAISolutions.com">AskHR@SynergyCloudAISolutions.com</a></p>
+                  <p><a href="mailto:askhr@synergycloudai.com">askhr@synergycloudai.com</a></p>
                 </div>
               </div>
 
@@ -63,7 +63,7 @@ export default function Footer() {
           <div className="mail-drafter-box">
             <h4>Draft an Email</h4>
             <p className="mail-drafter-subtitle">
-              Compose your note below to draft an email directly to <strong>AskHR@SynergyCloudAISolutions.com</strong>.
+              Compose your note below to draft an email directly to <strong>askhr@synergycloudai.com</strong>.
             </p>
 
             <form onSubmit={handleDraftMail} className="mail-form">
@@ -94,7 +94,7 @@ export default function Footer() {
                   ✉️ Draft Mail
                 </button>
                 <a
-                  href="mailto:AskHR@SynergyCloudAISolutions.com"
+                  href="mailto:askhr@synergycloudai.com"
                   className="btn btn-outline"
                 >
                   Direct Mail Link
